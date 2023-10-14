@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="shortcut icon" type="image/jpg" href="./assets/icons/dell-logo.svg"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/index.js"></script>
     <title>Dell</title>
   </head>
   <body>
     <header class="header">
-      <div class="header__container">
+      <div class="header__container wrapper">
         <div class="header__left-container">
           <div class="header__logo">
             <img
@@ -19,64 +22,287 @@
             />
           </div>
           <div class="header__nav-container">
-            <ul class="header__nav">
-              <li class="header__nav-item">Главная</li>
-              <li class="header__nav-item">Каталог</li>
-              <li class="header__nav-item">Новости</li>
-              <li class="header__nav-item">Наш АСЦ</li>
-              <li class="header__nav-item">Контакты</li>
+            <ul class="header__nav hidden">
+              <li class="header__nav-item"><a href="#">Главная</a></li>
+              <li class="header__nav-item"><a href="#">Каталог</a></li>
+              <li class="header__nav-item"><a href="#">Новости</a></li>
+              <li class="header__nav-item"><a href="#">Наш АСЦ</a></li>
+              <li class="header__nav-item"><a href="#">Контакты</a></li>
             </ul>
+
             <div class="header__search">
-              <img
-                src="./assets/icons/search-icon.svg"
-                alt="Поиск"
-                width="18.42px"
-                height="18.42px"
-              />
+              <a href="#"
+                ><img
+                  src="./assets/icons/search-icon.svg"
+                  alt="Поиск"
+                  width="18.42px"
+                  height="18.42px"
+              /></a>
             </div>
           </div>
         </div>
         <div class="header__tools-container">
-          <ul class="header__tools">
-            <li class="header__tools-item">
+          <div class="header__tools">
+            <div class="header__tools-item header__icon-item header__toggle-menu-button">
               <img
                 src="./assets/icons/person-icon.svg"
                 alt="Личный кабинет"
                 width="18.42px"
                 height="18.42px"
               />
-            </li>
-            <li class="header__tools-item">
+              <div class="header__toggle-menu ">
+                <div class="header__toggle-menu-container header__toggle-menu-container_hidden">
+                <div class="header__toggle-menu-top">
+                  <div class="header__icon-item">
+                    <img
+                    src="./assets/icons/person-icon.svg"
+                    alt="Личный кабинет"
+                    width="18.58px"
+                    height="20.15px"
+                  />
+                  </div>
+                  <span>Мария</span>
+                </div>
+                <div class="header__toggle-menu-bottom">
+                <ul class="header__toggle-menu-nav">
+                  <li class="header__toggle-menu-item">
+                    <a href="">Личный кабинет</a>
+                  </li>
+                  <li class="header__toggle-menu-item">
+                    <a href="">История заказов</a>
+                  </li>
+                  <li class="header__toggle-menu-item">
+                    <a href="">Персональные предложения</a>
+                  </li>
+                </ul>
+                <div class="header__toggle-menu-exit"><a href="">Выйти</a></div>
+              </div>
+              </div>
+            </div>
+            </div>
+            <div class="header__tools-item header__icon-item header__tools-item_mb-hide">
               <img
                 src="./assets/icons/schedule-icon.svg"
                 alt=""
                 width="18.42px"
                 height="18.42px"
               />
-            </li>
-            <li class="header__tools-item">
+            </div>
+            <div class="header__tools-item header__icon-item header__tools-item_mb-hide">
               <img
                 src="./assets/icons/love-icon.svg"
                 alt="Избранное"
                 width="18.42px"
                 height="18.42px"
               />
-            </li>
-            <li class="header__tools-item">
+            </div>
+            <div class="header__tools-item header__icon-item">
+              <span class="header__busket-count">3</span>
               <img
                 src="./assets/icons/basket-icon.svg"
                 alt="Корзина"
                 width="18.42px"
                 height="18.42px"
               />
-            </li>
+            </div>
+            <div class="header__tools-item header__icon-item header__burger-menu-button">
+              <span class="header__burger-menu-lines"></span>
+            </div>
           </ul>
+          <div class="header__burger-menu_overlay hidden"></div>
         </div>
       </div>
     </header>
-    <section class="slider"></section>
-    <section class="catalog"></section>
-    <section class="advantages"></section>
+    <section class="slider">
+      <div class="slider__container">
+      <div class="slider__left">
+        <div class="slider__scroll">
+          <span class="slider__scroll-description description"><a href="#catalog">Scroll to catalog</a></span>
+          <img src="./assets/icons/union-icon.svg" alt="" width="25px" height="38.5px">
+        </div>
+        <div class="slider__description">
+          <div class="slider__description-top">
+            <span class="description">Новое поступление</span>
+            <span class="slider__description-top-title title">Лучшие товары от компании Dell</span>
+          </div>
+          <div class="slider__button button">
+            <div class="icon_blue">
+              <img src="./assets/icons/arrow-small-right-icon.svg" alt="" width="12.89" height="35.14">
+            </div>
+            <span>Подробнее</span>
+          </div>
+        </div>
+        <div class="slider__controls">
+          <div class="slider__controls-items">
+            <img class="slider__controls-item" src="./assets/imgs/slider-item.png" alt="">
+            <img class="slider__controls-item" src="./assets/imgs/slider-item1.png" alt="">   
+            <img class="slider__controls-item" src="./assets/imgs/slider-item.png" alt="">
+            <img class="slider__controls-item" src="./assets/imgs/slider-item1.png" alt="">   
+            <img class="slider__controls-item" src="./assets/imgs/slider-item.png" alt="">
+            <img class="slider__controls-item" src="./assets/imgs/slider-item.png" alt="">
+          </div>
+          <div class="slider__controls-paggination">
+            <ul class="slider__controls-paggination-dots">
+              <li class="slider__controls-paggination-dot slider__controls-paggination-dot_active"></li>
+              <li class="slider__controls-paggination-dot"></li>
+              <li class="slider__controls-paggination-dot"></li>
+              <li class="slider__controls-paggination-dot"></li>
+              <li class="slider__controls-paggination-dot"></li>
+            </ul>
+            <div class="slider__controls-paggination-next">
+              <img src="./assets/icons/arrow-long-right-icon.svg" alt="" width="104.5px" height="21px">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="slider__right">
+        <div class="slider__right-container">
+          <span class="regular-text">Выгодное предложение от Dell</span>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="catalog" id="catalog">
+      <div class="catalog__container wrapper">
+        <div class="catalog__items">
+          <div class="catalog__item-description">
+            <div class="catalog__item-description-top">
+              <span class="catalog__item-description-title title">Каталог товаров от Dell</span>
+              <span class="catalog__item-description-description description">Наша компания является зарегистрированным и официальным партнером Dell в России.</span>  
+            </div>
+            <div class="catalog__button button">
+              <div class="icon_blue">
+                <img src="./assets/icons/arrow-small-right-icon.svg" alt="" width="12.89" height="35.14">
+              </div>
+              <span>В каталог</span>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-card-inner">
+              <span class="catalog__item-card-count">01</span>
+              <img class="catalog__item-card-img" src="./assets/imgs/laptops.png" alt="laptop">
+              <div class="catalog__item-card-description-container">
+                <span class="description">105 товаров</span>
+                <span class="regular-text">Ноутбуки</span>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-card-inner">
+              <span class="catalog__item-card-count">02</span>
+              <img class="catalog__item-card-img" src="./assets/imgs/pc.png" alt="laptop">
+              <div class="catalog__item-card-description-container">
+                <span class="description">65 товаров</span>
+                <span class="regular-text">Персональные компьютеры</span>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-card-inner">
+              <span class="catalog__item-card-count">03</span>
+              <img class="catalog__item-card-img" src="./assets/imgs/servers.png" alt="laptop">
+              <div class="catalog__item-card-description-container">
+                <span class="description">13 товаров</span>
+                <span class="regular-text">Cерверы</span>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-card-inner">
+              <span class="catalog__item-card-count">04</span>
+              <img class="catalog__item-card-img" src="./assets/imgs/dell-emc.png" alt="laptop">
+              <div class="catalog__item-card-description-container">
+                <span class="description">2345 товаров</span>
+                <span class="regular-text">Dell EMC</span>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__item">
+            <div class="catalog__item-card-inner">
+              <span class="catalog__item-card-count">05</span>
+              <img class="catalog__item-card-img" src="./assets/imgs/hardware.png" alt="laptop">
+              <div class="catalog__item-card-description-container">
+                <span class="description">195 товаров</span>
+                <span class="regular-text">Запасные части к Dell EMC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__container wrapper">
+        <div class="advantages__top-container">
+          <div class="advantages__top-img-container">
+            <img class="advantages__top-img" src="./assets/imgs/laptop.png" alt="">
+          </div>
+          <div class="advantages__description">
+            <div class="advantages__description-top">
+            <span class="title">Наши преимущества</span>
+            <span class="description">Оптимизация мощностей (расходов, социальных выплат и т.п.) позволили компании на 4,7% понизить цены по сравнению с конкурентами</span>
+            </div>
+            <div class="advantages__button button">
+            <div class="icon_blue">
+              <img src="./assets/icons/arrow-small-right-icon.svg" alt="" width="12.89" height="35.14">
+            </div>
+            <span>Оставить заявку</span>
+            </div>
+          </div>
+        </div>
+        <div class="advantages__items">
+          <div class="advantages__item">
+            <div class="advantages__item-container">
+              <div class="advantages__item-img-container">
+                <img class="advantages__item-img" src="./assets/icons/wallet-icon.svg" alt="">
+              </div>
+              <div class="advantages__item-text">
+                <span class="advantages__item-title">Самые выгодные и низкие цены</span>
+                <span class="advantages__item-description">В наличии широкий ассортимент, а также доступные цены 
+                  на ноутбуки Dell </span>
+            </div>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-container">
+              <div class="advantages__item-img-container">
+                <img class="advantages__item-img" src="./assets/icons/certificate-icon.svg" alt="">
+              </div>
+              <div class="advantages__item-text">
+                <span class="advantages__item-title">Авторизованный сервисный центр DELL</span>
+                <span class="advantages__item-description">Сертифицированный сервисный центр по ремонту техники Dell в России и странах СНГ</span>
+            </div>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-container">
+              <div class="advantages__item-img-container">
+                <img class="advantages__item-img" src="./assets/icons/people-icon.svg" alt="">
+              </div>
+              <div class="advantages__item-text">
+                <span class="advantages__item-title">Высокий уровень технической экспертизы</span>
+                <span class="advantages__item-description">
+                  Мы прошли аттестацию в виде тестирования, где показали высокий уровень знаний
+                </span>
+            </div>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-container">
+              <div class="advantages__item-img-container">
+                <img class="advantages__item-img" src="./assets/icons/box-icon.svg" alt="">
+              </div>
+              <div class="advantages__item-text">
+                <span class="advantages__item-title">Официальный партнер DELL</span>
+                <span class="advantages__item-description">Официальный поставщик продукции DELL в России 
+                  и странах СНГ</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
     <section class="news"></section>
     <section class="contacts"></section>
     <footr class="footer"></footr>

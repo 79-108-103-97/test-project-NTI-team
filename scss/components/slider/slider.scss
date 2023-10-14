@@ -1,0 +1,123 @@
+.slider {
+  width: 1920px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__container,
+  &__left,
+  &__right,
+  &__scroll,
+  &__description {
+    display: flex;
+  }
+  &__container {
+    width: 1920px;
+    height: 683px;
+  }
+  &__left {
+    background-color: #f2f2f2;
+    padding-left: 260px;
+    background-image: url(./../assets/imgs/Dell.png);
+    background-repeat: no-repeat;
+    background-position: top 97.4px left 260px;
+  }
+  &__scroll {
+    width: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 158px;
+    &-description {
+      font-size: 16px;
+      transform: rotate(-90deg);
+      white-space: nowrap;
+    }
+    img {
+      padding-top: 55px;
+    }
+  }
+  &__description {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 105px;
+    padding-bottom: 158px;
+    gap: 60px;
+    &-top {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      &-title {
+        width: 425px;
+      }
+    }
+  }
+  &__button {
+    width: 150px;
+  }
+  &__controls {
+    &-items {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      width: 609px;
+      overflow: hidden;
+    }
+    &-item {
+      &_hide {
+        opacity: 0;
+      }
+      padding-right: 60px;
+      padding-bottom: 41px;
+      transition: all 0.3s ease-in-out;
+    }
+    &-paggination {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      bottom: 163px;
+      right: 364.5px;
+      &-dots {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      &-dot {
+        &_active {
+          width: 9px;
+          height: 9px;
+          background-color: #292d32;
+          transition: all 0.3s ease-in-out;
+        }
+        display: block;
+        height: 5px;
+        width: 5px;
+        background-color: #d0d0d0;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      &-next {
+        cursor: pointer;
+      }
+    }
+  }
+  &__right {
+    width: 590px;
+    background: #f9f9f9;
+    background-image: url(./../assets/imgs/image_23.png);
+    background-repeat: no-repeat;
+    &-container {
+      display: flex;
+      width: 100%;
+      padding-right: 260px;
+      align-items: flex-end;
+      padding-bottom: 266px;
+      padding-left: 40px;
+      span {
+        display: flex;
+        max-width: 181px;
+        line-height: 32.5px;
+      }
+    }
+  }
+}

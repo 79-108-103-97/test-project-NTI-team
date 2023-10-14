@@ -1,0 +1,67 @@
+@include mq("mobile") {
+  .header {
+    width: 375px;
+    &__container {
+      position: relative;
+      max-width: 375px;
+      max-height: 90px;
+    }
+    &__logo {
+      width: 60px;
+      height: 60px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    &__nav {
+      &.hidden {
+        max-height: 0;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      z-index: 3;
+      position: fixed;
+      flex-direction: column;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      max-height: 390px;
+      padding-left: 38px;
+      padding-top: 56px;
+      background-color: #fff;
+      padding-bottom: 64px;
+      overflow: auto;
+      transition: all 0.3s ease-in-out;
+    }
+    &__search img {
+      width: 20px;
+      height: 20px;
+    }
+    &__tools {
+      gap: 15px;
+      &-item {
+        width: 46px;
+        height: 46px;
+        &:first-child img {
+          width: 17.44px;
+          height: 18.92px;
+        }
+        &:nth-child(4) img {
+          width: 24.49px;
+          height: 24.49px;
+        }
+        &_mb-hide {
+          display: none;
+        }
+      }
+    }
+    &__toggle-menu {
+      display: none;
+    }
+    &__burger-menu-button {
+      display: flex;
+    }
+  }
+}

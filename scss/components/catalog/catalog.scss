@@ -1,0 +1,81 @@
+.catalog {
+  width: 1920px;
+  &__container {
+    padding-top: 168px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    width: 440px;
+    height: 371px;
+    &-description {
+      display: flex;
+      flex-direction: column;
+      gap: 46px;
+      padding-top: 10px;
+      &-top {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+      }
+      &-title {
+        max-width: 372px;
+      }
+      &-description {
+        max-width: 323px;
+      }
+    }
+    &:nth-child(2) &-card-img {
+      top: -10px;
+      left: 12px;
+    }
+    &:nth-child(3) &-card-img {
+      top: -21px;
+      left: 115px;
+    }
+    &:nth-child(4) &-card-img {
+      top: 81px;
+      left: 51px;
+    }
+    &:nth-child(5) &-card-img {
+      top: 59px;
+      left: 75px;
+    }
+    &:nth-child(6) &-card-img {
+      top: 38px;
+      left: 87px;
+    }
+    &-card {
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+        border-radius: 20px;
+        width: 100%;
+        background: #f2f2f2;
+      }
+      &-count {
+        font-size: 25px;
+        font-weight: 100;
+      }
+      &-img {
+        position: absolute;
+      }
+      &-description {
+        &-container {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

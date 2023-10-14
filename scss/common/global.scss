@@ -1,0 +1,73 @@
+* {
+  font-family: system-ui, Roboto;
+  color: #292d32;
+}
+body.noscroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.title {
+  font-size: 50px;
+  font-weight: 400;
+}
+.description {
+  color: #838383;
+  font-size: 18px;
+  font-weight: 300;
+}
+.regular-text {
+  font-size: 25px;
+  font-weight: 400;
+}
+.button {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  cursor: pointer;
+  .icon_blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #33a9ff;
+  }
+}
+
+.wrapper {
+  padding-left: 260px;
+  padding-right: 260px;
+}
+@include mq("mobile") {
+  * {
+    font-size: 15px;
+  }
+  .wrapper {
+    padding: 0 15px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .description {
+    font-size: 15px;
+  }
+  .regular-text {
+    font-size: 20px;
+  }
+  .button {
+    justify-content: flex-start;
+    width: auto;
+    gap: 15px;
+    .icon_blue {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
