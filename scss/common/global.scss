@@ -4,7 +4,7 @@
 }
 body {
   overflow-x: hidden;
-  .noscroll {
+  &.noscroll {
     overflow: hidden;
     position: fixed;
     width: 100%;
