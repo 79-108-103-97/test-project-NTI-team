@@ -68,7 +68,7 @@
       }
       padding-right: 60px;
       padding-bottom: 41px;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.6s ease-in-out;
     }
     &-paggination {
       position: absolute;
@@ -87,7 +87,10 @@
           width: 9px;
           height: 9px;
           background-color: #292d32;
-          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          transform: scale(1.5);
+          background-color: #33a9ff;
         }
         display: block;
         height: 5px;
@@ -95,9 +98,14 @@
         background-color: #d0d0d0;
         border-radius: 50%;
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
       }
       &-next {
         cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: translate(5px);
+        }
       }
     }
   }

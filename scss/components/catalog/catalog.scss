@@ -1,7 +1,7 @@
 .catalog {
   width: 1920px;
   &__container {
-    padding-top: 168px;
+    margin-top: 168px;
   }
   &__items {
     display: grid;
@@ -61,6 +61,10 @@
         border-radius: 20px;
         width: 100%;
         background: #f2f2f2;
+        cursor: pointer;
+      }
+      &-inner:hover &-img {
+        transform: scale(1.1);
       }
       &-count {
         font-size: 25px;
@@ -68,6 +72,7 @@
       }
       &-img {
         position: absolute;
+        transition: all 0.3s ease-in-out;
       }
       &-description {
         &-container {
