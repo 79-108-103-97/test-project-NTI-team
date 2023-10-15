@@ -132,7 +132,10 @@ table {
   color: #292d32;
 }
 
-body.noscroll {
+body {
+  overflow-x: hidden;
+}
+body .noscroll {
   overflow: hidden;
   position: fixed;
   width: 100%;

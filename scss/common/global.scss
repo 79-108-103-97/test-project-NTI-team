@@ -2,10 +2,13 @@
   font-family: system-ui, Roboto;
   color: #292d32;
 }
-body.noscroll {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
+body {
+  overflow-x: hidden;
+  .noscroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
 }
 a {
   text-decoration: none;
